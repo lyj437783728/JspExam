@@ -12,7 +12,7 @@
 	Object obj = session.getAttribute("LoginInfo");
 	if(obj != null){
 %>
-您已经登录，是否要<a href="login.jsp">退出</a><br/>
+您已经登录，是否要<a href="LogoutServlet">退出</a><br/>
 
 <%}else{%>
 您还未登录，请先<a href="login.jsp">登录</a><br/>
