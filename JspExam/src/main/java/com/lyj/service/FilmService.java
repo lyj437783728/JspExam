@@ -50,4 +50,66 @@ public class FilmService {
 		
 		return al;
 	}
+
+	/**
+	 * 插入一条新的film
+	 * @param film
+	 * @return
+	 */
+	public boolean insertFilm(Film film){
+		boolean b = false;
+		FilmDao fd = new FilmDaoImpl();
+		
+		Connection conn = ConnectionFactory.getInstance().getConnection();
+		
+		try {
+			
+			int i = fd.insert(conn, film);
+			if(i == 1){
+				b = true;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				
+				e.printStackTrace();
+			}
+		}
+		
+		
+		return b;
+	}
+	
+	public boolean updateFilm(Film film){
+		boolean b = false;
+		FilmDao fd = new FilmDaoImpl();
+		
+		Connection conn = ConnectionFactory.getInstance().getConnection();
+		
+		try {
+			
+			int i = fd.update(conn, film);
+			if(i == 1){
+				b = true;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally{
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				
+				e.printStackTrace();
+			}
+		}
+		
+		
+		return b;
+	}
+
 }

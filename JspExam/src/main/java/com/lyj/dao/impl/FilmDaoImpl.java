@@ -11,13 +11,32 @@ import com.lyj.dao.FilmDao;
 public class FilmDaoImpl implements FilmDao {
 
 	public int insert(Connection conn, Film film) throws SQLException {
-		// TODO Auto-generated method stub
-		return 0;
+		int i = 0;
+		
+		String sql = "insert into film(title,description,language_id) values(?,?,?)";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setString(1, film.getTitle());
+		ps.setString(2, film.getDescription());
+		ps.setInt(3, film.getLanguage_id());
+		i = ps.executeUpdate();
+		System.out.println(i);
+		
+		return i;
 	}
 
-	public int update(Connection conn, Long id, Film film) throws SQLException {
-		// TODO Auto-generated method stub
-		return 0;
+	public int update(Connection conn, Film film) throws SQLException {
+		int i = 0;
+
+		String sql = "update film set title=?,description=?,language_id=? where film_id =?";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ps.setString(1, film.getTitle());
+		ps.setString(2, film.getDescription());
+		ps.setInt(3, film.getLanguage_id());
+		ps.setInt(4, film.getFilm_id());
+		i = ps.executeUpdate();
+		System.out.println(i);
+
+		return i;
 	}
 
 	public int delete(Connection conn, Film film) throws SQLException {

@@ -4,6 +4,16 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <filter>
+  	<filter-name>PermissionFilter</filter-name>
+  	<display-name>PermissionFilter</display-name>
+  	<description></description>
+  	<filter-class>com.lyj.filter.PermissionFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>PermissionFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
   <servlet>
   	<servlet-name>CheckName</servlet-name>
   	<display-name>CheckName</display-name>
@@ -22,6 +32,24 @@
   	<description></description>
   	<servlet-class>com.lyj.servlet.ShowFilm</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>AddFilm</servlet-name>
+  	<display-name>AddFilm</display-name>
+  	<description></description>
+  	<servlet-class>com.lyj.servlet.AddFilm</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EditFilmServlet</servlet-name>
+  	<display-name>EditFilmServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.lyj.servlet.EditFilmServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateFilmServlet</servlet-name>
+  	<display-name>UpdateFilmServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.lyj.servlet.UpdateFilmServlet</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>CheckName</servlet-name>
   	<url-pattern>/CheckName</url-pattern>
@@ -33,5 +61,17 @@
   <servlet-mapping>
   	<servlet-name>ShowFilm</servlet-name>
   	<url-pattern>/ShowFilm</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddFilm</servlet-name>
+  	<url-pattern>/AddFilm</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EditFilmServlet</servlet-name>
+  	<url-pattern>/EditFilmServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateFilmServlet</servlet-name>
+  	<url-pattern>/UpdateFilmServlet</url-pattern>
   </servlet-mapping>
 </web-app>

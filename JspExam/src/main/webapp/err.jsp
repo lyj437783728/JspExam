@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>登录失败</title>
+<title>失败</title>
 </head>
 <body>
-登录失败,<a href="login.jsp">点击返回登录界面</a>
+<%=(String)request.getAttribute("msg") %><br/>
+<a href="index.jsp">返回初始界面</a>
 </body>
 </html>

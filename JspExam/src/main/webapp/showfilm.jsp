@@ -21,7 +21,8 @@
 %>
 <tr>
 <td><%=film.getFilm_id() %></td><td><%=film.getTitle() %></td><td><%=film.getDescription() %></td><td><%=film.getLanguage() %></td>
-<td><a href="#">删除</a></td><td><a href="#">修改</a></td>
+<td><a href="#">删除</a></td>
+<td><a href="EditFilmServlet?id=<%=film.getFilm_id() %>&title=<%=film.getTitle() %>&description=<%=film.getDescription() %>&language=<%=film.getLanguage() %>">修改</a></td>
 </tr>
 
 <%} %>

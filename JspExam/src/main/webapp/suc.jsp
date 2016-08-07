@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>登录成功</title>
+<title>成功</title>
 </head>
 <body>
-登录成功
+<%=(String)request.getAttribute("msg") %><br/>
+<a href="index.jsp">返回初始界面</a>
 </body>
 </html>

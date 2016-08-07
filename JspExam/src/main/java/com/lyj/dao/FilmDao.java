@@ -12,7 +12,7 @@ public interface FilmDao {
 
 	public int insert(Connection conn, Film film) throws SQLException;
 
-	public int update(Connection conn, Long id, Film film) throws SQLException;
+	public int update(Connection conn, Film film) throws SQLException;
 
 	public int delete(Connection conn, Film film) throws SQLException;
 

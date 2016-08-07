@@ -20,7 +20,7 @@
 
 <a href="ShowFilm">显示film列表</a><br/>
 <a href="addfilm.jsp">新增film列表</a><br/>
-<a href="#">删除film列表</a><br/>
-<a href="#">编辑film列表</a><br/>
+<a href="ShowFilm">删除film列表</a><br/>
+<a href="ShowFilm">编辑film列表</a><br/>
 </body>
 </html>
